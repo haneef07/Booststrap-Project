@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+    /* Custom styles for the photo gallery */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+    }
+
+    .photo-grid img {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Custom styles for the footer */
+    .footer {
+      padding: 20px 0;
+      background-color: #f8f9fa;
+      text-align: center;
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: none;
+    }
+
+    /* Custom styles for the cards */
+    .card {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .carousel-inner .carousel-item {
+      transition: opacity 1s ease-in-out;
+    }
+  </style>
+</head>
+
+<body>
+<!-- Bootstrap-based Header with Responsive Navigation Bar -->
+<header class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">Your Logo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#section1">Section 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#section2">Section 2</a>
+                </li>
+                <!-- Add more navigation links as needed -->
+            </ul>
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</header>
+
+<!-- Bootstrap Carousel -->
+<div id="carouselExample" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExample" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExample" data-slide-to="1"></li>
+        <!-- Add more indicators for additional slides -->
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://images.unsplash.com/photo-1690301196394-ef7fcfa9535b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80.jpg" class="d-block w-100" alt="Image 1">
+            <div class="carousel-caption">
+                <h3>Caption for Image 1</h3>
+                <p>Call-to-action for Image 1</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1690342824253-4d9488961ded?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDR8Ym84alFLVGFFMFl8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60.jpg" class="d-block w-100" alt="Image 2">
+            <div class="carousel-caption">
+                <h3>Caption for Image 2</h3>
+                <p>Call-to-action for Image 2</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1690336607264-20a7bd9222e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDV8Ym84alFLVGFFMFl8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60.jpg" class="d-block w-100" alt="Image 2">
+            <div class="carousel-caption">
+                <h3>Caption for Image 2</h3>
+                <p>Call-to-action for Image 2</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1690207925026-d774e9571791?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEwfGJvOGpRS1RhRTBZfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=600&q=60.jpg" class="d-block w-100" alt="Image 2">
+            <div class="carousel-caption">
+                <h3>Caption for Image 2</h3>
+                <p>Call-to-action for Image 2</p>
+            </div>
+        </div>
+        <!-- Add more carousel items for additional images -->
+    </div>
+    <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<!-- Custom CSS Section with Flex Div -->
+<section class="custom-section" id="section1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="custom-item">
+                    <img src="https://images.unsplash.com/photo-1690122644787-d20b6c6b51b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDh8Ym84alFLVGFFMFl8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60.jpg" alt="Image 3">
+                    <p>Short description for Image 3</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="custom-item">
+                    <img src="https://images.unsplash.com/photo-1690221065159-1de014122f87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDl8Ym84alFLVGFFMFl8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60.jpg" alt="Image 4">
+                    <p>Short description for Image 4</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="custom-item">
+                    <img src="https://images.unsplash.com/photo-1667605112005-106601eadf41?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDExfGJvOGpRS1RhRTBZfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=600&q=60.jpg" alt="Image 5">
+                    <p>Short description for Image 5</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Photo Gallery using CSS Grid -->
+<section class="photo-gallery" id="section2">
+    <div class="container">
+        <div class="photo-grid">
+            <img src="https://images.unsplash.com/photo-1676368906386-9dce9cafdb9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE0fGJvOGpRS1RhRTBZfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=600&q=60.jpg" alt="Image 6">
+            <img src="https://images.unsplash.com/photo-1690311724917-9307b2fd0cb8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE1fGJvOGpRS1RhRTBZfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=600&q=60.jpg" alt="Image 7">
+            <img src="https://images.unsplash.com/photo-1673937267022-74114a65a0b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDIwfGJvOGpRS1RhRTBZfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=600&q=60.jpg" alt="Image 8">
+            <!-- Add more images here -->
+        </div>
+    </div>
+</section>
+
+<!-- Bootstrap Card Section -->
+<section class="card-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1690143272827-7d7fc02342ec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDI2fGJvOGpRS1RhRTBZfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=600&q=60.jpg" class="card-img-top" alt="Image 9">
+                    <div class="card-body">
+                        <h5 class="card-title">Card Title 1</h5>
+                        <p class="card-text">Short description for Card 1</p>
+                        <a href="#" class="btn btn-primary">CTA Button 1</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1690174911647-a01b0111219a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDIzfGJvOGpRS1RhRTBZfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=600&q=60.jpg" class="card-img-top" alt="Image 10">
+                    <div class="card-body">
+                        <h5 class="card-title">Card Title 2</h5>
+                        <p class="card-text">Short description for Card 2</p>
+                        <a href="#" class="btn btn-primary">CTA Button 2</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1690177930724-2aef91b1d2f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDI0fGJvOGpRS1RhRTBZfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=600&q=60.jpg" class="card-img-top" alt="Image 11">
+                    <div class="card-body">
+                        <h5 class="card-title">Card Title 3</h5>
+                        <p class="card-text">Short description for Card 3</p>
+                        <a href="#" class="btn btn-primary">CTA Button 3</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Bootstrap Footer -->
+<footer class="footer">
+    <div class="container">
+        <p>Copyright &copy; 2023 Your Website. All rights reserved.</p>
+        <!-- Add footer links here -->
+        <button class="btn btn-secondary back-to-top">Back to Top</button>
+    </div>
+</footer>
+
+<!-- Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    // Back to top button
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 100) {
+        $('.back-to-top').fadeIn();
+      } else {
+        $('.back-to-top').fadeOut();
+      }
+    });
+
+    $('.back-to-top').click(function () {
+      $('html, body').animate({ scrollTop: 0 }, 600);
+      return false;
+    });
+  </script>
+</body>
+
+</html>
